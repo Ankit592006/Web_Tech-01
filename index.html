@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>Student Task Manager</h1>
+            <p>JavaScript Interactive Web Application</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="highPriorityTasks">0</h3>
+                <p>High Priority</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+
+        <section class="form-section">
+
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter student name"
+                        >
+
+                        <small
+                            id="studentNameError"
+                            class="error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="example@gmail.com"
+                        >
+
+                        <small
+                            id="emailError"
+                            class="error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskTitle">
+                            Task Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskTitle"
+                            placeholder="Enter task title"
+                        >
+
+                        <small
+                            id="taskTitleError"
+                            class="error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select id="priority">
+
+                            <option value="">
+                                Select Priority
+                            </option>
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option value="Medium">
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                        </select>
+
+                        <small
+                            id="priorityError"
+                            class="error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="dueDate">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dueDate"
+                        >
+
+                        <small
+                            id="dueDateError"
+                            class="error"
+                        ></small>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Add Task
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Search and Filter -->
+
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+            >
+
+            <select id="filterPriority">
+
+                <option value="All">
+                    All Priorities
+                </option>
+
+                <option value="High">
+                    High
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="Low">
+                    Low
+                </option>
+
+            </select>
+
+            <button
+                id="clearAllBtn"
+                class="btn btn-danger"
+            >
+                Clear All
+            </button>
+
+        </section>
+
+
+        <!-- Task List -->
+
+        <section class="task-section">
+
+            <div class="section-header">
+
+                <h2>Task List</h2>
+
+                <span id="taskCount">
+                    0 tasks
+                </span>
+
+            </div>
+
+
+            <div id="taskList">
+
+                <!-- JavaScript will insert tasks here -->
+
+            </div>
+
+
+            <div
+                id="emptyMessage"
+                class="empty"
+            >
+
+                <h3>No tasks found</h3>
+
+                <p>
+                    Add a task using the form above.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            JavaScript Practical No. 2
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
